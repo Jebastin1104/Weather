@@ -1,11 +1,11 @@
-/* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Raleway:wght@300;400;700&display=swap');
 
 /* General styling */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
-    background: linear-gradient(135deg, #6dd5ed, #2193b0); /* Modern gradient */
+    background: url('https://source.unsplash.com/1600x900/?weather,sky') no-repeat center center/cover;
     margin: 0;
     padding: 20px;
     display: flex;
@@ -13,23 +13,27 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    backdrop-filter: blur(5px);
 }
 
-/* Container */
+/* Glassmorphism Container */
 .container {
-    background: white;
+    background: rgba(255, 255, 255, 0.2);
     padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
     max-width: 400px;
     width: 90%;
-    animation: fadeIn 0.8s ease-in-out;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    animation: fadeIn 1s ease-in-out;
 }
 
 /* Heading */
 h1 {
-    color: #333;
-    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    font-weight: 700;
     margin-bottom: 15px;
 }
 
@@ -38,15 +42,22 @@ input {
     width: 80%;
     padding: 12px;
     font-size: 1em;
-    border: 2px solid #ccc;
+    border: 2px solid rgba(255, 255, 255, 0.4);
     border-radius: 8px;
     margin-bottom: 12px;
-    transition: border-color 0.3s ease;
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
 }
 
 input:focus {
     border-color: #007bff;
     outline: none;
+    background: rgba(255, 255, 255, 0.6);
 }
 
 /* Button */
@@ -55,30 +66,33 @@ button {
     font-size: 1em;
     font-weight: 600;
     color: white;
-    background: #007bff;
+    background: linear-gradient(45deg, #007bff, #00d4ff);
     border: none;
     border-radius: 8px;
     cursor: pointer;
     transition: background 0.3s ease-in-out, transform 0.2s ease;
     width: 85%;
+    box-shadow: 0 3px 10px rgba(0, 123, 255, 0.3);
 }
 
 button:hover {
-    background: #0056b3;
+    background: linear-gradient(45deg, #0056b3, #0099ff);
     transform: scale(1.05);
 }
 
 /* Weather info */
 #weather {
-    font-size: 1.2em;
-    color: #555;
+    font-size: 1.3em;
+    color: #fff;
+    font-weight: 400;
     margin-top: 20px;
     padding: 15px;
-    background: #e9ecef;
-    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
     width: 90%;
-    font-weight: 400;
-    animation: slideIn 0.6s ease-in-out;
+    font-family: 'Raleway', sans-serif;
+    backdrop-filter: blur(5px);
+    animation: slideIn 0.8s ease-in-out;
 }
 
 /* Keyframe Animations */
